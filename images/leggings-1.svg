@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-label="High-Waist Leggings">
+  <defs>
+    <linearGradient id="g" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f7dfe5"/>
+      <stop offset="100%" stop-color="#ffffff"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" fill="url(#g)"/>
+  <circle cx="720" cy="190" r="145" fill="#9a3f55" opacity="0.13"/>
+  <circle cx="150" cy="1000" r="220" fill="#26191c" opacity="0.08"/>
+  <rect x="150" y="250" width="600" height="700" rx="90" fill="#ffffff" opacity="0.58"/>
+  <text x="450" y="535" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="68" font-weight="800" fill="#26191c">KAVOMAZ</text>
+  <text x="450" y="620" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="40" font-weight="700" fill="#9a3f55">High-Waist Leggings</text>
+  <text x="450" y="685" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#6f5d62">Front View</text>
+  <text x="450" y="820" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="24" fill="#6f5d62">Replace this placeholder with your product photo</text>
+</svg>
