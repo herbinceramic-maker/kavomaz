@@ -1,7 +1,0 @@
-
-body{font-family:Arial;margin:0;background:#fff8f4}
-header{padding:15px;background:#fff;position:sticky;top:0}
-.nav{display:flex;justify-content:space-between;align-items:center}
-.lang-switch button{margin:2px;padding:6px}
-.hero{display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:40px}
-img{max-width:100%}
