@@ -1,6 +1,12 @@
-# KAVOMAZ Multilingual SEO Final
+# KAVOMAZ final multilingual SEO site
 
-Keep the existing /images folder. This package uses your current image filenames exactly. Upload all files and folders to the root of the GitHub Pages repository.
+Upload all files/folders to the GitHub repository root.
+Keep your existing /images folder.
+Add the new sports bra back-view images with these exact names:
+- sports-bra-model-1-back-1.jpg
+- sports-bra-model-1-back-2.jpg
+- sports-bra-model-1-back-3.jpg
+- sports-bra-model-2-back-1.jpg
+- sports-bra-model-2-back-2.jpg
 
-
-Update: Product pages no longer show the internal label “SEO content”; FAQ answers are visible for customers.
+After upload, submit https://kavomaz.com/sitemap.xml in Google Search Console.
