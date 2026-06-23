@@ -717,3 +717,30 @@ html[dir="rtl"] .hero-text, html[dir="rtl"] .page-hero p, html[dir="rtl"] .produ
   .back-photo-grid { grid-template-columns:1fr; max-width:360px; }
   .back-photo-card img { height:auto !important; aspect-ratio:3/4 !important; }
 }
+/* Arabic mobile overflow fix */
+@media (max-width: 560px){
+
+  html[dir="rtl"],
+  html[dir="rtl"] body{
+    width:100%;
+    max-width:100%;
+    overflow-x:hidden !important;
+  }
+
+  html[dir="rtl"] .hero,
+  html[dir="rtl"] .section,
+  html[dir="rtl"] .page-hero,
+  html[dir="rtl"] .product-card,
+  html[dir="rtl"] .product-gallery,
+  html[dir="rtl"] .product-content{
+    width:100% !important;
+    max-width:100% !important;
+    overflow:hidden !important;
+  }
+
+  html[dir="rtl"] img{
+    max-width:100% !important;
+    height:auto !important;
+  }
+
+}
