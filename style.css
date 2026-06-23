@@ -717,75 +717,34 @@ html[dir="rtl"] .hero-text, html[dir="rtl"] .page-hero p, html[dir="rtl"] .produ
   .back-photo-grid { grid-template-columns:1fr; max-width:360px; }
   .back-photo-card img { height:auto !important; aspect-ratio:3/4 !important; }
 }
-/* Final Arabic mobile layout fix */
+/* Arabic text only RTL - layout stays normal */
+.arabic-page {
+  direction: ltr;
+  overflow-x: hidden;
+}
+
+.arabic-page .hero-copy,
+.arabic-page .section-heading,
+.arabic-page .product-content,
+.arabic-page .content-card,
+.arabic-page .faq-item,
+.arabic-page .footer {
+  direction: rtl;
+  text-align: right;
+}
+
+.arabic-page .centered {
+  text-align: center;
+}
+
 @media (max-width: 768px) {
-
-  html[lang="ar"],
-  html[lang="ar"] body {
-    width: 100vw !important;
-    max-width: 100vw !important;
-    overflow-x: hidden !important;
-    margin: 0 !important;
-    padding: 0 !important;
-  }
-
-  html[lang="ar"] main,
-  html[lang="ar"] header,
-  html[lang="ar"] footer,
-  html[lang="ar"] .site-header,
-  html[lang="ar"] .nav,
-  html[lang="ar"] .hero,
-  html[lang="ar"] .section,
-  html[lang="ar"] .product-card,
-  html[lang="ar"] .content-card,
-  html[lang="ar"] .amazon-box,
-  html[lang="ar"] .fit-box {
-    width: 100% !important;
-    max-width: 100% !important;
-    min-width: 0 !important;
-    margin-left: 0 !important;
-    margin-right: 0 !important;
-    overflow-x: hidden !important;
-  }
-
-  html[lang="ar"] .hero {
-    display: flex !important;
-    flex-direction: column !important;
-    padding: 36px 16px !important;
-  }
-
-  html[lang="ar"] .hero-copy,
-  html[lang="ar"] .hero-visual {
-    width: 100% !important;
-    max-width: 100% !important;
-  }
-
-  html[lang="ar"] .product-card {
-    display: flex !important;
-    flex-direction: column !important;
-  }
-
-  html[lang="ar"] .product-gallery,
-  html[lang="ar"] .product-gallery.two,
-  html[lang="ar"] .back-photo-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important;
-    width: 100% !important;
-  }
-
-  html[lang="ar"] img {
-    width: 100% !important;
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  html[lang="ar"] h1,
-  html[lang="ar"] h2,
-  html[lang="ar"] h3,
-  html[lang="ar"] p,
-  html[lang="ar"] li,
-  html[lang="ar"] a {
-    max-width: 100% !important;
-    overflow-wrap: anywhere !important;
+  .arabic-page .hero,
+  .arabic-page .section,
+  .arabic-page .product-card,
+  .arabic-page .product-gallery,
+  .arabic-page .hero-visual {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
   }
 }
