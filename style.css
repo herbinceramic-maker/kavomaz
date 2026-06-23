@@ -683,3 +683,37 @@ html[dir="rtl"] .lang-switcher { direction:ltr; }
   .back-photo-grid { grid-template-columns:minmax(0,1fr); }
   .hero-actions .btn, .amazon-box .btn, .product-card .btn { width:100%; }
 }
+
+
+/* ===== KAVOMAZ V5 FINAL LAYOUT FIXES ===== */
+html, body { width:100%; max-width:100%; overflow-x:hidden !important; }
+img, video, svg { max-width:100%; height:auto; }
+.hero { min-height:auto !important; overflow:hidden; }
+.hero-visual { min-height:0 !important; max-height:560px; overflow:hidden; }
+.hero-visual img { width:100%; height:clamp(280px, 42vw, 520px) !important; min-height:0 !important; object-fit:cover; object-position:center; }
+.product-card, .product-gallery, .product-content, .content-card, .page-hero { overflow:hidden; }
+.back-photo-grid { max-width:980px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(150px, 1fr)); gap:14px; align-items:start; }
+.back-photo-card { min-height:0 !important; border-radius:18px; }
+.back-photo-card img { width:100%; height:220px !important; aspect-ratio:auto !important; object-fit:cover; object-position:center; display:block; }
+.back-photo-card:empty { display:none; }
+.missing-photo { display:none !important; }
+.crisscross-section .section-heading { margin-bottom:24px; }
+.crisscross-section .section-heading p { max-width:760px; margin-left:auto; margin-right:auto; }
+html[dir="rtl"] { overflow-x:hidden; }
+html[dir="rtl"] h1, html[dir="rtl"] h2, html[dir="rtl"] h3 { letter-spacing:0 !important; overflow-wrap:anywhere; }
+html[dir="rtl"] .page-hero h1, html[dir="rtl"] .hero h1 { line-height:1.25; }
+html[dir="rtl"] .hero-text, html[dir="rtl"] .page-hero p, html[dir="rtl"] .product-content p { unicode-bidi:plaintext; }
+@media (max-width:980px){
+  .hero { grid-template-columns:1fr !important; }
+  .hero-visual img { height:auto !important; max-height:none; aspect-ratio:4/3; }
+  .back-photo-grid { max-width:720px; grid-template-columns:repeat(2, minmax(0, 1fr)); }
+  .back-photo-card img { height:240px !important; }
+}
+@media (max-width:560px){
+  .hero, .section, .page-hero { width:100%; max-width:100%; padding-left:14px !important; padding-right:14px !important; }
+  .page-hero h1, .hero h1 { max-width:100%; font-size:clamp(1.9rem, 9vw, 2.7rem) !important; line-height:1.18; }
+  html[dir="rtl"] .page-hero h1, html[dir="rtl"] .hero h1 { font-size:clamp(1.65rem, 8.5vw, 2.35rem) !important; line-height:1.35; }
+  .hero-text, .page-hero p { font-size:1rem !important; }
+  .back-photo-grid { grid-template-columns:1fr; max-width:360px; }
+  .back-photo-card img { height:auto !important; aspect-ratio:3/4 !important; }
+}
