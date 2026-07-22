@@ -88,3 +88,17 @@ if (menuButton && navLinks) {
     });
   });
 })();
+
+/* KAIOS-V7-NEWSLETTER-JS-START */
+document.querySelectorAll('form[data-newsletter-mailto]').forEach(function(form){
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var input=form.querySelector('input[type="email"]');
+    if(!input || !input.checkValidity()){if(input) input.reportValidity();return;}
+    var to=form.getAttribute('data-newsletter-mailto')||'info@kavomaz.com';
+    var subject='KAVOMAZ Activewear newsletter request';
+    var body='Please add this email address to the KAVOMAZ Activewear newsletter request list:%0D%0A%0D%0A'+encodeURIComponent(input.value)+'%0D%0A%0D%0AI understand that I can unsubscribe by emailing KAVOMAZ.';
+    window.location.href='mailto:'+to+'?subject='+encodeURIComponent(subject)+'&body='+body;
+  });
+});
+/* KAIOS-V7-NEWSLETTER-JS-END */
