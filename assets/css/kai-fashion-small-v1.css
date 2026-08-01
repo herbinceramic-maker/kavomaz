@@ -1,0 +1,18 @@
+
+.kai-fashion{overflow-x:clip}
+.kai-fashion main{min-width:0}
+.kai-fashion img{max-width:100%;height:auto}
+.kai-fashion :where(h1,h2,h3,p,li){overflow-wrap:anywhere}
+.kai-fashion :focus-visible{outline:3px solid currentColor;outline-offset:3px}
+html[dir="rtl"] .kai-fashion .skip-link,html[lang^="ar"] .kai-fashion .skip-link{
+ left:auto!important;right:.75rem!important;top:0!important;
+ transform:translateY(-180%)!important;max-width:calc(100vw - 1.5rem)!important
+}
+html[dir="rtl"] .kai-fashion .skip-link:focus,html[lang^="ar"] .kai-fashion .skip-link:focus{
+ top:.75rem!important;transform:translateY(0)!important
+}
+.kai-fashion :where(.product-card,.article-card,.card){min-width:0}
+@media(max-width:720px){
+ .kai-fashion :where(a,button,input,select,textarea){min-height:44px}
+ .kai-fashion table{display:block;max-width:100%;overflow-x:auto}
+}
