@@ -1,0 +1,23 @@
+#kai-consent-banner{
+ position:fixed;left:18px;right:18px;bottom:18px;z-index:2147483647;
+ max-width:1180px;margin:auto;padding:18px 20px;
+ background:#111827;color:#fff;border:1px solid rgba(255,255,255,.16);
+ border-radius:18px;box-shadow:0 16px 50px rgba(0,0,0,.32);
+ font-family:Arial,sans-serif;display:flex;gap:18px;
+ align-items:center;justify-content:space-between
+}
+#kai-consent-banner[hidden]{display:none!important}
+.kai-consent-copy{line-height:1.55;font-size:14px}
+.kai-consent-copy strong{display:block;font-size:16px;margin-bottom:4px}
+.kai-consent-actions{display:flex;gap:10px;flex-wrap:wrap;flex-shrink:0}
+.kai-consent-actions button,.kai-consent-actions a{
+ border-radius:999px;padding:11px 17px;font-weight:700;
+ font-size:14px;text-decoration:none;cursor:pointer;white-space:nowrap
+}
+#kai-consent-decline{background:#fff;color:#111827;border:1px solid #d1d5db}
+#kai-consent-accept{background:#f97316;color:#fff;border:1px solid #f97316}
+#kai-consent-policy{color:#fff;border:1px solid rgba(255,255,255,.45)}
+@media(max-width:760px){
+ #kai-consent-banner{display:block;left:10px;right:10px;bottom:10px;padding:16px}
+ .kai-consent-actions{margin-top:14px}
+}
