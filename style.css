@@ -941,3 +941,116 @@ html[dir="rtl"] .article-summary{border-left:1px solid var(--line);border-right:
  .back-photo-card img{height:auto!important;aspect-ratio:3/4}
 }
 /* ===== KAI-OS CH16 SITE COMPLETION V7 END ===== */
+
+/* KAI_OS_FASHION_TEXT_SEO_PREVIEW_V1_BEGIN
+   Scoped visual refinements for the approved Fashion text/SEO preview. */
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] main h1,
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] main h2 {
+  text-wrap: balance;
+  overflow-wrap: anywhere;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .hero h1 {
+  font-size: clamp(2.65rem, 5.25vw, 5.15rem);
+  line-height: 1.01;
+  letter-spacing: -.045em;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .page-hero h1 {
+  font-size: clamp(2.15rem, 4vw, 4rem);
+  line-height: 1.08;
+  letter-spacing: -.035em;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .hero-text,
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .page-hero > p:not(.eyebrow) {
+  max-width: 62ch;
+  line-height: 1.75;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial {
+  padding-top: clamp(1.25rem, 2.5vw, 2.5rem);
+  padding-bottom: clamp(1.5rem, 3vw, 3.25rem);
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-card {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: clamp(1.5rem, 3.5vw, 3.25rem);
+  border: 1px solid rgba(77, 45, 54, .10);
+  border-radius: 30px;
+  background:
+    radial-gradient(circle at 92% 0%, rgba(179, 61, 95, .10), transparent 33%),
+    linear-gradient(135deg, rgba(255,255,255,.96), rgba(249,241,238,.96));
+  box-shadow: 0 24px 70px rgba(65, 39, 46, .08);
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-intro {
+  display: grid;
+  grid-template-columns: minmax(220px, .75fr) minmax(0, 1.35fr);
+  gap: clamp(1rem, 3vw, 4rem);
+  align-items: end;
+  margin-bottom: 1.4rem;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-intro h2 {
+  margin: 0;
+  font-size: clamp(1.85rem, 3vw, 3.05rem);
+  line-height: 1.1;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-copy {
+  max-width: 82ch;
+  margin-inline-start: auto;
+  font-size: clamp(1rem, 1.15vw, 1.12rem);
+  line-height: 1.8;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-copy p:last-child {
+  margin-bottom: 0;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: clamp(1.4rem, 3vw, 2.4rem);
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-card {
+  min-height: 145px;
+  padding: 1.25rem;
+  border-radius: 20px;
+  border: 1px solid rgba(77, 45, 54, .10);
+  background: rgba(255, 255, 255, .84);
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-card h3 {
+  margin: 0 0 .55rem;
+  font-size: 1.05rem;
+  line-height: 1.3;
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: var(--muted, #6c5b60);
+}
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-supporting-section,
+body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-contact-section {
+  padding-top: clamp(1.25rem, 2vw, 2rem);
+}
+html[dir="rtl"] body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-copy {
+  margin-inline-start: 0;
+  margin-inline-end: auto;
+}
+html[dir="rtl"] body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-card,
+html[dir="rtl"] body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-card {
+  text-align: right;
+}
+@media (max-width: 760px) {
+  body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.45rem);
+  }
+  body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .page-hero h1 {
+    font-size: clamp(2rem, 10vw, 2.75rem);
+  }
+  body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-intro,
+  body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-grid {
+    grid-template-columns: 1fr;
+  }
+  body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-editorial-card {
+    border-radius: 22px;
+  }
+  body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fashion-proof-card {
+    min-height: 0;
+  }
+}
+/* KAI_OS_FASHION_TEXT_SEO_PREVIEW_V1_END */
