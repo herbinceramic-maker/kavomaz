@@ -1054,3 +1054,84 @@ html[dir="rtl"] body.kai-fashion[data-kai-fashion-text-seo-preview="v1"] .kai-fa
   }
 }
 /* KAI_OS_FASHION_TEXT_SEO_PREVIEW_V1_END */
+
+
+/* KAIOS-FASHION-VISUAL-REFRESH-V1-BEGIN */
+body[data-kai-visual-refresh="v1"]{
+  font-family:"Aptos","Segoe UI",Arial,sans-serif;
+  font-size:16px;
+  line-height:1.68;
+}
+body[data-kai-visual-refresh="v1"] .nav{padding-top:12px;padding-bottom:12px;}
+body[data-kai-visual-refresh="v1"] .brand{min-width:164px;letter-spacing:0;}
+body[data-kai-visual-refresh="v1"] .kai-kavomaz-wordmark{
+  display:block;width:170px;height:auto;max-height:34px;object-fit:contain;
+}
+body[data-kai-visual-refresh="v1"] main h1{
+  font-size:clamp(2.15rem,4.25vw,4rem)!important;
+  line-height:1.08!important;
+  letter-spacing:-.045em!important;
+  text-wrap:balance;
+}
+body[data-kai-visual-refresh="v1"] .hero h1{max-width:720px;}
+body[data-kai-visual-refresh="v1"] .page-hero h1{max-width:900px;margin-inline:auto;}
+body[data-kai-visual-refresh="v1"] main h2{
+  font-size:clamp(1.65rem,3vw,2.65rem)!important;
+  line-height:1.14!important;
+  letter-spacing:-.032em!important;
+  text-wrap:balance;
+}
+body[data-kai-visual-refresh="v1"] main h3{
+  font-size:clamp(1.1rem,1.7vw,1.35rem);line-height:1.28;
+}
+body[data-kai-visual-refresh="v1"] .hero-text,
+body[data-kai-visual-refresh="v1"] .page-hero>p:not(.eyebrow),
+body[data-kai-visual-refresh="v1"] .kai-fashion-editorial-copy{
+  font-size:1.02rem;line-height:1.72;
+}
+body[data-kai-visual-refresh="v1"] .hero{gap:42px;padding-top:54px;padding-bottom:44px;}
+body[data-kai-visual-refresh="v1"] .page-hero{padding-top:52px;padding-bottom:28px;}
+body[data-kai-visual-refresh="v1"] .section{padding-top:58px;padding-bottom:58px;}
+body[data-kai-visual-refresh="v1"] .kai-fashion-editorial-card{
+  padding:clamp(26px,4vw,46px);gap:clamp(22px,3vw,40px);
+}
+body[data-kai-visual-refresh="v1"] .kai-fashion-editorial-intro h2{
+  font-size:clamp(1.8rem,3.4vw,2.8rem)!important;max-width:650px;
+}
+body[data-kai-visual-refresh="v1"] .kai-fashion-proof-card{padding:20px;}
+.kai-fashion-poster-section{
+  max-width:1180px;margin:0 auto;padding-left:22px!important;padding-right:22px!important;
+}
+.kai-fashion-poster-grid{
+  display:grid;grid-template-columns:minmax(0,.72fr) minmax(300px,1fr);
+  gap:36px;align-items:center;background:linear-gradient(135deg,#fff,#f7ecee);
+  border:1px solid var(--line);border-radius:28px;padding:clamp(24px,4vw,46px);
+  box-shadow:0 18px 50px rgba(70,31,43,.08);
+}
+.kai-fashion-poster-copy p:not(.eyebrow){color:var(--muted);max-width:520px;}
+.kai-fashion-poster-frame{
+  margin:0;border-radius:24px;overflow:hidden;background:#171315;
+  box-shadow:0 22px 46px rgba(38,21,27,.18);
+}
+.kai-fashion-poster-frame img{
+  display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;
+}
+@media(max-width:880px){
+  body[data-kai-visual-refresh="v1"] .kai-kavomaz-wordmark{width:150px;max-height:30px;}
+  .kai-fashion-poster-grid{grid-template-columns:1fr;gap:24px;}
+  .kai-fashion-poster-frame{max-width:520px;margin-inline:auto;}
+}
+@media(max-width:560px){
+  body[data-kai-visual-refresh="v1"] main h1{
+    font-size:clamp(1.8rem,8.4vw,2.55rem)!important;
+    line-height:1.16!important;letter-spacing:-.028em!important;
+  }
+  body[data-kai-visual-refresh="v1"] main h2{
+    font-size:clamp(1.45rem,6.8vw,2rem)!important;line-height:1.2!important;
+  }
+  body[data-kai-visual-refresh="v1"] .section{padding-top:42px;padding-bottom:42px;}
+  body[data-kai-visual-refresh="v1"] .page-hero{padding-top:38px;padding-bottom:22px;}
+  .kai-fashion-poster-section{padding-left:14px!important;padding-right:14px!important;}
+  .kai-fashion-poster-grid{padding:20px;border-radius:22px;}
+}
+/* KAIOS-FASHION-VISUAL-REFRESH-V1-END */
