@@ -80,4 +80,35 @@ gtag('consent', 'default', {
 <script src="/script.js"></script>
 <script data-kai-retargeting-foundation="v1" defer="" src="/assets/js/kai-retargeting-events.js"></script>
 <script defer="" src="/assets/js/kai-consent-v1.js?v=1"></script>
+<script id="kai-kavomaz-gmail-actions-v8">
+(function(){
+  var gmailUrl = "https://mail.google.com/mail/?view=cm&fs=1&to=info%40kavomaz.com";
+  function wire(){
+    var nodes = document.querySelectorAll('a,button');
+    for (var i=0; i<nodes.length; i++){
+      var el = nodes[i];
+      var label = (el.textContent || '').replace(/\s+/g,' ').trim().toLowerCase();
+      if (label.indexOf('email kavomaz') === -1) continue;
+      if (el.tagName && el.tagName.toLowerCase() === 'a'){
+        el.setAttribute('href', gmailUrl);
+        el.setAttribute('target', '_blank');
+        el.setAttribute('rel', 'noopener noreferrer');
+      }
+      if (!el.getAttribute('data-kai-gmail-wired')){
+        el.setAttribute('data-kai-gmail-wired','1');
+        el.addEventListener('click', function(ev){
+          ev.preventDefault();
+          window.open(gmailUrl, '_blank', 'noopener,noreferrer');
+        });
+      }
+    }
+  }
+  if (document.readyState === 'loading'){
+    document.addEventListener('DOMContentLoaded', wire);
+  } else {
+    wire();
+  }
+  setTimeout(wire, 500);
+})();
+</script>
 </body></html>
