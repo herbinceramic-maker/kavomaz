@@ -102,3 +102,21 @@ document.querySelectorAll('form[data-newsletter-mailto]').forEach(function(form)
   });
 });
 /* KAIOS-V7-NEWSLETTER-JS-END */
+
+
+/* KAIOS-SEO-RUNTIME-SCHEMA-V1 */
+(function(){
+  const image=document.querySelector('meta[property="og:image"]')?.content||document.querySelector('meta[name="twitter:image"]')?.content||"https://kavomaz.com/images/hero.jpg";
+  const logo={"@type":"ImageObject","url":"https://kavomaz.com/images/kai-visual-refresh-v1/kavomaz-wordmark-v1.webp"};
+  const patch=(x)=>{
+    if(Array.isArray(x)){x.forEach(patch);return;}
+    if(!x||typeof x!=="object")return;
+    const types=new Set(Array.isArray(x["@type"])?x["@type"]:[x["@type"]].filter(Boolean));
+    if((types.has("Article")||types.has("BlogPosting"))&&!x.image)x.image=image;
+    if(types.has("Organization")&&String(x.name||"").toLowerCase()==="kavomaz"&&!x.logo)x.logo=logo;
+    Object.values(x).forEach(v=>{if(v&&typeof v==="object")patch(v);});
+  };
+  document.querySelectorAll('script[type="application/ld+json"]').forEach(s=>{
+    try{const data=JSON.parse(s.textContent);patch(data);s.textContent=JSON.stringify(data);}catch(_){}
+  });
+})();
