@@ -1604,3 +1604,12 @@ html[dir="rtl"] .article[data-kavomaz-article="manual-pack-v1"]>section:nth-of-t
     scroll-behavior: auto !important;
   }
 }
+
+
+/* KAI preview visual refinement — approval required before production */
+.hero{position:relative}
+.hero::before{content:"";position:absolute;width:48%;height:70%;right:3%;top:10%;border-radius:50%;background:radial-gradient(circle,rgba(214,132,151,.20),transparent 66%);filter:blur(10px);z-index:-1}
+.hero-visual{border:1px solid rgba(126,52,72,.10);box-shadow:0 28px 70px rgba(90,44,56,.14)}
+.product-card{transition:transform .24s ease,box-shadow .24s ease}
+.product-card:hover{transform:translateY(-4px);box-shadow:0 22px 48px rgba(70,31,43,.12)}
+@media(prefers-reduced-motion:no-preference){.hero-visual img{transition:transform .8s cubic-bezier(.2,.8,.2,1)}.hero-visual:hover img{transform:scale(1.018)}}
