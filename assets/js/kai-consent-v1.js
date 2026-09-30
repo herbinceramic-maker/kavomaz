@@ -2,6 +2,19 @@
   "use strict";
 
   var KEY = "kai_fashion_consent_v1";
+  var GTM_ID = "GTM-WVSCZN22";
+  var gtmLoaded = false;
+
+  function loadGtm() {
+    if (gtmLoaded) return;
+    gtmLoaded = true;
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({"gtm.start": new Date().getTime(), event: "gtm.js"});
+    var s = document.createElement("script");
+    s.async = true;
+    s.src = "https://www.googletagmanager.com/gtm.js?id=" + encodeURIComponent(GTM_ID);
+    document.head.appendChild(s);
+  }
   var lang = (document.documentElement.lang || "en").toLowerCase().slice(0, 2);
 
   var copy = {
@@ -58,6 +71,8 @@
       functionality_storage: "granted",
       security_storage: "granted"
     });
+
+    if (granted) loadGtm();
 
     window.dataLayer.push({
       event: "cookie_consent_update",
