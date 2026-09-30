@@ -1,32 +1,45 @@
-/* KAI FASHION VISUAL DRAFT — owner approval required before merge */
+/* KAI FASHION VISUAL REFRESH v2 — approved 2026-09-30 */
 .kai-fashion .hero{
-  width:min(1220px,92%);margin:34px auto 22px;padding:clamp(24px,4vw,58px);
-  border:1px solid rgba(117,48,68,.13);border-radius:32px;
-  background:linear-gradient(135deg,rgba(255,255,255,.86),rgba(247,235,230,.9));
-  box-shadow:0 30px 80px rgba(70,31,43,.12);overflow:hidden;position:relative
+  width:min(1480px,96%);min-height:680px;margin:18px auto 18px;padding:clamp(34px,6vw,84px);
+  border:1px solid rgba(255,255,255,.16);border-radius:30px;overflow:hidden;position:relative;
+  display:block!important;background:#171315;box-shadow:0 34px 90px rgba(38,25,28,.2)
 }
-.kai-fashion .hero:before{
-  content:"";position:absolute;width:280px;height:280px;border-radius:50%;
-  right:-110px;top:-120px;background:radial-gradient(circle,rgba(155,63,88,.17),transparent 68%);
-  pointer-events:none
-}
-.kai-fashion .hero-copy{position:relative;z-index:2}
-.kai-fashion .hero h1{font-size:clamp(2.35rem,5vw,4.9rem);line-height:.98;letter-spacing:-.055em;max-width:820px;margin:.3rem 0 1rem}
-.kai-fashion .hero-text{font-size:clamp(1rem,1.7vw,1.2rem);max-width:680px}
-.kai-fashion .hero-visual{border-radius:28px;overflow:hidden;box-shadow:0 24px 60px rgba(38,25,28,.16)}
-.kai-fashion .hero-visual img{aspect-ratio:16/10;object-fit:cover}
-.kai-fashion .trust-strip{width:min(1180px,92%);margin:0 auto 26px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-.kai-fashion .trust-strip>div{background:rgba(255,255,255,.72);border:1px solid var(--line);border-radius:18px;padding:16px 18px}
-.kai-fashion .trust-strip strong{display:block;font-size:.95rem;margin-bottom:3px}
-.kai-fashion .trust-strip span{display:block;color:var(--muted);font-size:.88rem}
+.kai-fashion .hero-visual{position:absolute!important;inset:0;z-index:0;border-radius:0!important;box-shadow:none!important;overflow:hidden}
+.kai-fashion .hero-visual img{width:100%;height:100%;object-fit:cover;object-position:center 38%;filter:saturate(.9) contrast(1.02)}
+.kai-fashion .hero:after{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(16,11,13,.93) 0%,rgba(22,15,18,.82) 38%,rgba(22,15,18,.38) 68%,rgba(22,15,18,.18) 100%)}
+.kai-fashion .hero-copy{position:relative;z-index:3;color:#fff;max-width:660px;padding-top:clamp(20px,5vw,68px)}
+.kai-fashion .hero .eyebrow{color:#f2c6d0;letter-spacing:.2em}
+.kai-fashion .hero h1{font-size:clamp(2.65rem,5.8vw,5.8rem);line-height:.94;letter-spacing:-.06em;max-width:760px;margin:.55rem 0 1.2rem;color:#fff}
+.kai-fashion .hero-text{font-size:clamp(1rem,1.6vw,1.22rem);line-height:1.6;max-width:610px;color:rgba(255,255,255,.84)}
+.kai-fashion .hero-actions{margin-top:26px}
+.kai-fashion .hero .btn{border-radius:999px}
+.kai-fashion .hero .btn-primary{background:linear-gradient(135deg,#c34d72,#9b3f58);color:#fff;border-color:transparent;box-shadow:0 10px 34px rgba(155,63,88,.32)}
+.kai-fashion .hero .btn-secondary{background:rgba(17,13,15,.42);color:#fff;border-color:rgba(255,255,255,.48);backdrop-filter:blur(12px)}
+.kai-fashion .kai-fashion-hero-rail{position:absolute;z-index:4;right:clamp(22px,4vw,58px);top:50%;transform:translateY(-50%);display:grid;gap:12px;width:min(280px,26vw)}
+.kai-fashion .kai-fashion-hero-rail a{display:grid;grid-template-columns:68px 1fr;align-items:center;gap:12px;padding:9px;border:1px solid rgba(255,255,255,.28);border-radius:16px;background:rgba(17,13,15,.45);color:#fff;backdrop-filter:blur(16px);box-shadow:0 14px 34px rgba(0,0,0,.18)}
+.kai-fashion .kai-fashion-hero-rail img{width:68px;height:68px;object-fit:cover;border-radius:11px}
+.kai-fashion .kai-fashion-hero-rail span{display:grid;gap:2px}
+.kai-fashion .kai-fashion-hero-rail b{font-size:.96rem}
+.kai-fashion .kai-fashion-hero-rail small{font-size:.75rem;color:rgba(255,255,255,.7)}
+.kai-fashion .trust-strip{width:min(1180px,92%);margin:0 auto 34px;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.kai-fashion .trust-strip>div{background:#171315;color:#fff;border:1px solid rgba(255,255,255,.08);border-radius:18px;padding:17px 19px;box-shadow:0 12px 30px rgba(38,25,28,.09)}
+.kai-fashion .trust-strip strong{display:block;font-size:.94rem;margin-bottom:3px}
+.kai-fashion .trust-strip span{display:block;color:rgba(255,255,255,.68);font-size:.86rem}
 .kai-fashion .product-card{border:1px solid var(--line);box-shadow:0 18px 44px rgba(70,31,43,.09);overflow:hidden}
 .kai-fashion .product-gallery img{transition:transform .35s ease}
 .kai-fashion .product-card:hover .product-gallery img{transform:scale(1.018)}
-.kai-fashion .btn{border-radius:999px}
-@media(prefers-reduced-motion:reduce){
- .kai-fashion .product-gallery img{transition:none!important}
+@media(prefers-reduced-motion:reduce){.kai-fashion .product-gallery img{transition:none!important}}
+@media(max-width:980px){
+ .kai-fashion .hero{min-height:760px;padding:34px 28px 28px}
+ .kai-fashion .hero:after{background:linear-gradient(180deg,rgba(16,11,13,.88),rgba(16,11,13,.58) 58%,rgba(16,11,13,.85))}
+ .kai-fashion .hero-copy{max-width:760px;padding-top:18px}
+ .kai-fashion .kai-fashion-hero-rail{left:28px;right:28px;top:auto;bottom:28px;transform:none;width:auto;grid-template-columns:repeat(3,1fr)}
 }
-@media(max-width:860px){
- .kai-fashion .hero{padding:24px;border-radius:24px}
+@media(max-width:680px){
+ .kai-fashion .hero{min-height:820px;border-radius:22px;padding:28px 22px}
+ .kai-fashion .hero h1{font-size:clamp(2.35rem,11vw,4rem)}
+ .kai-fashion .kai-fashion-hero-rail{left:18px;right:18px;bottom:18px;grid-template-columns:1fr}
+ .kai-fashion .kai-fashion-hero-rail a{grid-template-columns:54px 1fr}
+ .kai-fashion .kai-fashion-hero-rail img{width:54px;height:54px}
  .kai-fashion .trust-strip{grid-template-columns:1fr}
 }
