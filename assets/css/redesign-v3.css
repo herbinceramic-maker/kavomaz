@@ -63,3 +63,22 @@ body.v3-site.v3-home .trust-strip span{color:rgba(255,255,255,.68)}
 @media(prefers-reduced-motion:no-preference){body.v3-site .product-card,body.v3-site .blog-card,body.v3-site .v3-hero-card{transition:transform .24s ease,box-shadow .24s ease}body.v3-site .product-card:hover,body.v3-site .blog-card:hover,body.v3-site .v3-hero-card:hover{transform:translateY(-4px);box-shadow:0 30px 70px rgba(53,31,38,.14)}}
 @media(max-width:980px){body.v3-site .detail-grid{grid-template-columns:1fr}body.v3-site .detail-grid>.content-card{position:static}body.v3-site.v3-home .hero{padding-bottom:300px}body.v3-site.v3-home .v3-hero-rail{left:5vw;right:5vw;top:auto;bottom:38px;transform:none;width:auto;grid-template-columns:repeat(3,1fr)}}
 @media(max-width:680px){body.v3-site .section{padding:52px 0}body.v3-site .product-gallery.detail{grid-template-columns:1fr}body.v3-site.v3-home .hero{min-height:900px;padding:130px 24px 340px}body.v3-site.v3-home .hero h1{font-size:clamp(2.7rem,13vw,4.6rem)}body.v3-site.v3-home .v3-hero-rail{grid-template-columns:1fr;left:20px;right:20px}body.v3-site.v3-home .trust-strip{grid-template-columns:1fr;margin-top:18px}body.v3-site .page-hero{padding:60px 24px}}
+
+/* FASHION HERO V3.1 — robust image + benefit strip */
+body.v3-site.v3-home .hero{
+  background-image:url('/images/hero.jpg')!important;
+  background-size:cover!important;
+  background-position:center 36%!important;
+  background-repeat:no-repeat!important;
+}
+body.v3-site.v3-home .hero-visual{display:none!important}
+body.v3-site.v3-home .trust-strip>div{
+  background:transparent!important;
+  color:#fff!important;
+  border:0!important;
+  border-right:1px solid rgba(255,255,255,.10)!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+}
+body.v3-site.v3-home .trust-strip strong{color:#fff!important}
+body.v3-site.v3-home .trust-strip span{color:rgba(255,255,255,.68)!important}
