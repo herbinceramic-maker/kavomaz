@@ -414,4 +414,16 @@ document.addEventListener("DOMContentLoaded",function(){
   });
 });
 </script>
+<script data-kai-orphan-grid-guard="fashion-v1">
+document.addEventListener("DOMContentLoaded",function(){
+  const grid=document.querySelector(".blog-grid"); if(!grid)return;
+  document.querySelectorAll("main > article.kaios-article-card").forEach(src=>{
+    const a=src.querySelector("h2 a"),p=src.querySelector("p"),t=src.querySelector("time[datetime]"); if(!a)return;
+    const card=document.createElement("article"); card.className="blog-card";
+    const href=new URL(a.href,location.origin).pathname;
+    card.innerHTML="<h2>"+a.innerHTML+"</h2><p>"+(p?p.innerHTML:"")+"</p>"+(t?'<time class="kai-card-date" datetime="'+t.getAttribute("datetime")+'">'+t.getAttribute("datetime")+"</time>":"")+'<a class="btn btn-secondary" href="'+href+'">Read guide</a>';
+    grid.prepend(card); src.remove();
+  });
+});
+</script>
 </body></html>
