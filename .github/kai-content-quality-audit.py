@@ -68,3 +68,33 @@ summary = os.environ.get("GITHUB_STEP_SUMMARY")
 if summary:
     with open(summary, "a", encoding="utf-8") as fh:
         fh.write(report)
+
+
+# KAI internal-link gate: generated editorial articles must not ship as SEO dead ends.
+# This is intentionally blocking so future automated publishing cannot silently remove
+# the contextual path back to core KAVOMAZ collections and the editorial hub.
+kaios_files=[]
+missing_related=[]
+thin_internal=[]
+for path in files:
+    rel=path.relative_to(ROOT).as_posix()
+    if not rel.startswith("blog/"):
+        continue
+    raw=path.read_text("utf-8",errors="ignore")
+    if 'class="kaios-article"' not in raw:
+        continue
+    kaios_files.append(path)
+    if '<h2>Related next step</h2>' not in raw:
+        missing_related.append(path.relative_to(ROOT).as_posix())
+    internal=re.findall(r'href=["\']/(?!/)([^"\'#?]+)',raw,re.I)
+    if len(set(internal)) < 3:
+        thin_internal.append(path.relative_to(ROOT).as_posix())
+
+if missing_related or thin_internal:
+    print("\n## KAI Internal Linking Gate")
+    for p in missing_related:
+        print(f"- Missing Related next step: {p}")
+    for p in thin_internal:
+        print(f"- Fewer than 3 contextual internal destinations: {p}")
+    raise SystemExit(1)
+print(f"\nKAI internal-link gate OK: {len(kaios_files)} generated articles checked.")
