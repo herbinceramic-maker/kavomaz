@@ -1691,3 +1691,47 @@ body:has(.kaios-article) footer{
   .kaios-article-body h2{font-size:28px}
   .kaios-article-body p,.kaios-article-body li{font-size:16px;line-height:1.78}
 }
+
+
+/* KAI 2026-10-28: generated article top-nav correction */
+body:has(.kaios-article) .site-header .nav{
+  max-width:1180px;
+  margin:0 auto;
+  padding:13px 22px;
+  display:flex;
+  align-items:center;
+  justify-content:flex-end;
+  gap:24px;
+}
+body:has(.kaios-article) .site-header .nav::before{
+  content:"KAVOMAZ";
+  margin-right:auto;
+  min-width:155px;
+  padding:9px 0 9px 48px;
+  background:url('/images/favicon.svg') left center/38px 38px no-repeat;
+  color:#2b1b20;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+body:has(.kaios-article) .site-header .nav a{
+  flex:0 0 auto;
+  font-size:15px;
+  color:#42343a;
+}
+@media(max-width:760px){
+  body:has(.kaios-article) .site-header .nav{
+    gap:11px;
+    overflow-x:auto;
+    white-space:nowrap;
+    padding-inline:12px;
+  }
+  body:has(.kaios-article) .site-header .nav::before{
+    content:"K";
+    min-width:42px;
+    width:42px;
+    padding-left:42px;
+    overflow:hidden;
+    background-size:34px 34px;
+  }
+  body:has(.kaios-article) .site-header .nav a{font-size:13px}
+}
