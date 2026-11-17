@@ -39,6 +39,7 @@
     var value = '';
     try {
       value = [
+        localStorage.getItem('kai_fashion_consent_v1'),
         localStorage.getItem('cookieConsent'),
         localStorage.getItem('consent'),
         localStorage.getItem('kai_consent'),
@@ -51,7 +52,7 @@
   }
 
   function push(eventName, extra) {
-    window.dataLayer.push(Object.assign({
+    var payload = Object.assign({
       event: eventName,
       kai_event_version: '1.0',
       project: project(),
@@ -61,7 +62,22 @@
       content_id: contentId(),
       page_path: location.pathname,
       consent_state: consentState()
-    }, extra || {}));
+    }, extra || {});
+
+    window.dataLayer.push(payload);
+
+    // GTM currently provides the Fashion GA4 configuration but does not map
+    // KAI custom commerce events. Send them directly only after consent.
+    if (payload.project === 'kavomaz-fashion') {
+      try {
+        var choice = localStorage.getItem('kai_fashion_consent_v1');
+        if (choice === 'accepted' && typeof window.gtag === 'function') {
+          var params = Object.assign({}, payload);
+          delete params.event;
+          window.gtag('event', eventName, params);
+        }
+      } catch (e) {}
+    }
   }
 
   function safeLinkData(anchor) {
