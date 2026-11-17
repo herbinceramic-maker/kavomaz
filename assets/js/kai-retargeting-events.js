@@ -74,6 +74,7 @@
         if (choice === 'accepted' && typeof window.gtag === 'function') {
           var params = Object.assign({}, payload);
           delete params.event;
+          params.send_to = 'G-RT1HZ5XFXZ';
           window.gtag('event', eventName, params);
         }
       } catch (e) {}
