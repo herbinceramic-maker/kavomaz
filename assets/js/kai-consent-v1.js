@@ -2,7 +2,19 @@
   "use strict";
 
   var KEY = "kai_fashion_consent_v1";
+  var CLARITY_ID = "xe1t02moh3";
+  var clarityLoaded = false;
   var lang = (document.documentElement.lang || "en").toLowerCase().slice(0, 2);
+
+  function loadClarity() {
+    if (clarityLoaded) return;
+    clarityLoaded = true;
+    (function(c,l,a,r,i,t,y){
+      c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+      t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+      y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window,document,"clarity","script",CLARITY_ID);
+  }
 
   var copy = {
     en: {
@@ -65,6 +77,8 @@
       consent_state: granted ? "granted" : "denied",
       project: "kavomaz-fashion"
     });
+
+    if (granted) loadClarity();
   }
 
   function saveChoice(choice) {
